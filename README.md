@@ -16,7 +16,7 @@ querySelectorAll() → Selects a static NodeList of all elements that match a gi
 
 Here is the code-snap to understand their syntax:
 
-```js
+```javascript
 const mainTitle = document.getElementById("header-title");
 
 const productCards = document.getElementsByClassName("card");
@@ -39,7 +39,7 @@ Step 3: Place it inside an existing DOM element using methods like .append() or 
 
 Here is the code-snap to understand the syntax:
 
-```js
+```javascript
 // 1. Create
 const newParagraph = document.createElement("p");
 
@@ -63,7 +63,7 @@ It travels from the target child element up through its parent, grandparent, and
 
 Here is the code-snap to understand the syntax:
 
-```js
+```javascript
 // Imagine a button inside a section element
 
 document.getElementById("my-button").addEventListener("click", function () {
@@ -90,7 +90,7 @@ Why it's useful: It saves memory (one listener vs. hundreds) and automatically h
 
 Here is the code-snap to understand the syntax:
 
-```js
+```javascript
 // Attaching one listener to the whole table body instead of every row
 document.getElementById("table-body").addEventListener("click", function (event) {
   // Check if the clicked target was a table row (TR)
@@ -111,7 +111,7 @@ stopPropagation() → Halts the event from bubbling further up the DOM tree, pro
 
 Here is the code-snap to understand the syntax:
 
-```js
+```javascript
 // Stopping default browser behavior
 document.querySelector("a.disabled-link").addEventListener("click", function (event) {
   event.preventDefault(); // The link will no longer take you to a new page
