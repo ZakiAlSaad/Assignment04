@@ -184,7 +184,7 @@ main #all-job-header {
   margin: 40px;
   cursor: pointer;
 }
-
+/* No Job Display Styles */
 #no-job-display {
   box-shadow: 0px 0px 25px 9px #8c8c8c18;
   max-width: 70%;

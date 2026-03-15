@@ -104,7 +104,7 @@ mainContainer.addEventListener("click", function (event) {
       jobStatus,
       jobDetail,
     };
-
+// check if the job is already in the interview list to avoid duplicates
     const jobExist = interviewList.find(
       (item) => item.jobName == cardInfo.jobName,
     );
