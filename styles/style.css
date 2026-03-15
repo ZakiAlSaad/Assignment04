@@ -1,0 +1,206 @@
+/* Reset Styles */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.geist-font {
+  font-family: "Geist", sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+/* Header Styles */
+header #counter-display {
+  max-width: 70%;
+  box-shadow: 0px 0px 25px 9px #4e4e4e1b;
+  margin: 60px auto;
+  padding: 30px 20px;
+}
+
+header #counter-display h1 {
+  margin-bottom: 20px;
+  color: #013770;
+}
+
+header #counter-display > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header #counter-display > div > div {
+  box-shadow: 0px 0px 25px 9px #7e7d7d1b;
+  padding: 10px 20px;
+  width: 340px;
+  border-radius: 8px;
+}
+
+header #counter-display > div > div p {
+  font-size: #303844;
+  font-size: 20px;
+}
+/* Counter Display Styles */
+#total-display {
+  color: #033d7a;
+  font-size: 30px;
+  padding: 10px 0;
+}
+/* Interview Display Styles */
+#interview-display {
+  color: #13bb83;
+  font-size: 30px;
+  padding: 10px 0;
+}
+/* Rejected Display Styles */
+#rejected-display {
+  color: #f03d3d;
+  font-size: 30px;
+  padding: 10px 0;
+}
+/* All Jobs Header Styles */
+main #all-job-header {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+  border-top: 3px solid #1414140f;
+}
+
+#all-job-header .available-jobs-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#all-job-header .available-jobs-title h3 {
+  color: #02376e;
+}
+
+#all-job-header .available-jobs-title p {
+  color: #7487a1;
+}
+
+#all-job-header .btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+#all-job-header .btn-container button {
+  width: 80px;
+  /* background: #3b82f6; */
+  background: #f1f1f1;
+  /* color: #fff; */
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid #0303031b;
+  cursor: pointer;
+}
+
+#all-job-container,
+#filtered-section {
+  max-width: 70%;
+  margin: 30px auto;
+}
+
+#filtered-section .job-card,
+#all-job-container .job-card {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  margin: 30px auto;
+  box-shadow: 0px 0px 25px 9px #69686813;
+}
+
+#filtered-section .job-card h2,
+#all-job-container .job-card h2 {
+  color: #023974;
+}
+
+#filtered-section .job-card p,
+#all-job-container .job-card p {
+  color: #63758f;
+}
+
+#filtered-section .job-card .black-p,
+#all-job-container .job-card .black-p {
+  color: #000;
+}
+
+#filtered-section .job-card #card-status,
+#all-job-container .job-card #card-status {
+  background: #ecf0f8;
+  font-weight: bold;
+  color: #023469;
+  height: 40px;
+  width: 120px;
+  border-radius: 4px;
+}
+
+#filtered-section .job-card .btn-container,
+#all-job-container .job-card .btn-container {
+  display: flex;
+  gap: 15px;
+}
+
+#filtered-section .job-card .btn-container button,
+#all-job-container .job-card .btn-container button {
+  background: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  height: 40px;
+  width: 120px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#filtered-section .job-card .btn-container .interview-btn,
+#all-job-container .job-card .btn-container .interview-btn {
+  border-color: #0cc285;
+  color: #18ac7a;
+}
+
+#filtered-section .job-card .btn-container .rejected-btn,
+#all-job-container .job-card .btn-container .rejected-btn {
+  border-color: #eb3a3a;
+  color: #ec3f3f;
+}
+
+#filtered-section .job-card #delete-icon,
+#all-job-container .job-card #delete-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 40px;
+  cursor: pointer;
+}
+
+#no-job-display {
+  box-shadow: 0px 0px 25px 9px #8c8c8c18;
+  max-width: 70%;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+#no-job-display h2 {
+  color: #01346b;
+}
+
+#no-job-display p {
+  color: #63758d;
+}

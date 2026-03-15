@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="geist-font">
+    <header>
+      <section id="counter-display">
+        <h1>Job Application Tracker</h1>
+
+        <div>
+          <div>
+            <p>Total</p>
+            <h2 id="total-display">0</h2>
+          </div>
+          <div>
+            <p>Interview</p>
+            <h2 id="interview-display">0</h2>
+          </div>
+          <div>
+            <p>Rejected</p>
+            <h2 id="rejected-display">0</h2>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="all-job-header">
+        <div class="available-jobs-title">
+          <h3>Available Jobs</h3>
+          <p><span id="job-quantity">8</span> Jobs</p>
+        </div>
+
+        <div class="btn-container">
+          <button onclick="toggleStyle('show-all-btn')" id="show-all-btn">
+            All
+          </button>
+          <button
+            onclick="toggleStyle('show-interview-btn')"
+            id="show-interview-btn"
+          >
+            Interview
+          </button>
+          <button
+            onclick="toggleStyle('show-rejected-btn')"
+            id="show-rejected-btn"
+          >
+            Rejected
+          </button>
+        </div>
+      </section>
+
+      <section id="filtered-section" class="hidden"></section>
+
+      <section id="all-job-container" class="">
+        <div class="job-card">
+          <h2 class="job-name">HypnotiXstudio</h2>
+          <p class="job-role">React Native Developer</p>
+          <p class="job-location">Remote • Full-time • $140,000 - $180,000</p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Architecting and deploying high-performance, cross-platform mobile applications using React Native for a global user base of millions.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">WebDev Agency CA</h2>
+          <p class="job-role">Full-Stack Web Designer & Developer</p>
+          <p class="job-location">
+            Los Angeles, CA • Full-time • $500,000 - $650,000
+          </p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Developing premium web solutions at WebDev Agency CA, utilizing a modern full-stack approach (MongoDB, Express, Node.js) to create seamless, high-impact user journeys for elite clients.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">Viper Technologies</h2>
+          <p class="job-role">Data Analyst</p>
+          <p class="job-location">
+            Boston, MA • Full-time • $123,000 - $160,000
+          </p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Engineering custom, responsive data visualizations within the React ecosystem, ensuring seamless integration between complex NoSQL backends and intuitive, high-impact frontends.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">CloudEngine LLC</h2>
+          <p class="job-role">Full-Stack Developer</p>
+          <p class="job-location">
+            Seattle, WA • Full-time • $400,000 - $800,000
+          </p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Architecting and scaling mission-critical backend systems using Python and AWS, ensuring 99.9% uptime through robust cloud infrastructure and automated CI/CD pipelines.
+          </p>
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">Innovation Labs</h2>
+          <p class="job-role">UI/UX Engineer</p>
+          <p class="job-location">
+            Austin, TX • Full-time • $110,000 - $150,000
+          </p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Create beautiful and functional user interfaces for our suite of
+            products. Strong design skills and frontend development expertise
+            required.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">MegaCorp Solutions</h2>
+          <p class="job-role">JavaScript Developer</p>
+          <p class="job-location">
+            New York, NY • Full-time • $130,000 - $170,00
+          </p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Build enterprise applications with JavaScript and modern frameworks.
+            We offer competitive compensation, health insurance, and
+            professional development opportunities.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">StartupXYZ</h2>
+          <p class="job-role">Full Stack Engineer</p>
+          <p class="job-location">Remote • Full-time • $120,000 - $160,000</p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            Join our fast-growing startup and work on our core platform.
+            Experience with Node.js and React required. Great benefits and
+            equity package included.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-name">TechCorp Industries</h2>
+          <p class="job-role">Senior Frontend Developer</p>
+          <p class="job-location">
+            San Francisco, CA • Full-time • $130,000 - $175,000
+          </p>
+          <button class="job-status" id="card-status">NOT APPLIED</button>
+          <p class="job-detail black-p">
+            We are looking for an experienced Frontend Developer to build
+            scalable web applications using React and TypeScript. You will work
+            with a talented team on cutting-edge projects.
+          </p>
+
+          <div class="btn-container">
+            <button id="interview-btn" class="interview-btn">INTERVIEW</button>
+            <button id="rejected-btn" class="rejected-btn">REJECTED</button>
+          </div>
+
+          <span id="delete-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+      </section>
+
+      <section id="no-job-display" class="hidden">
+        <img src="assets/jobs.png" alt="" srcset="" />
+        <h2>No jobs available</h2>
+        <p>Check back soon for new job opportunities</p>
+      </section>
+    </main>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

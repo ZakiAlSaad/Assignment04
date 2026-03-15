@@ -1,0 +1,27 @@
+/* Mobile Styles */
+@media screen and (max-width: 576px) {
+  header #counter-display {
+    max-width: 90%;
+    margin: 10px auto 40px;
+  }
+/* header */
+  header #counter-display > div {
+    display: grid;
+    gap: 20px;
+    justify-self: center;
+    align-items: center;
+  }
+/* main content */
+  main #all-job-header {
+    max-width: 90%;
+  }
+
+  #all-job-container,
+  #filtered-section {
+    max-width: 90%;
+  }
+
+  #no-job-display {
+    max-width: 90%;
+  }
+}
